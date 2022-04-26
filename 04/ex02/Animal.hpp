@@ -1,0 +1,22 @@
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
+
+#include <string>
+#include <iostream>
+
+class Animal{
+public:
+	Animal();
+	Animal(const Animal &another);
+	Animal &operator=(const Animal &another);
+	virtual ~Animal() = 0;
+
+	virtual void makeSound() const = 0;
+	std::string getType() const;
+
+protected:
+	std::string type;
+
+};
+
+#endif
